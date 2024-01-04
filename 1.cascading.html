@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cascading</title>
+  <style>
+    h1 {
+      font-size: 16px;
+    }
+
+    button {
+      background-color: blue;
+      color: white;
+    }
+
+    .special {
+      background-color: purple;
+      color: pink;
+    }
+
+    #primary {
+      background-color: black;
+    }
+
+    .special {
+      /* 마지막에 정의된 특정한 스타일 속성에 한해서 덮어씌워진다. 
+      별도로 재정의 하지않았다면 이전에 정의한 스타일 속성이 유효하다.
+      */
+      background-color: brown;
+    }
+
+    /* CSS는 구체적일수록 우선순위가 높다.
+    !important > 인라인 스타일 > #아이디 > .클래스 > 태그
+    */
+  </style>
+</head>
+
+<body>
+  <h1>Cascading을 확인하는 버튼들</h1>
+  <button>태그 버튼</button>
+  <button class="special">클래스 버튼</button>
+  <button class="special">클래스 버튼</button>
+  <button class="special" id="primary">클래스+아이디 버튼</button>
+  <button class="special" id="primary" style="background-color: darkgreen;">클래스+아이디 버튼</button>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Model</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      background-color: chocolate;
+    }
+
+    .box1,
+    .box3 {
+      padding: 20px;
+      border: 5px solid black;
+    }
+
+    .box1 {
+      /* 내가 지정한 width, height를 유지하고 싶다면 box-sizing: border-box로 지정 */
+      /* 
+      HTML은 박스로 이루어져 있다. 
+      박스 사이즈를 padding과 border까지 합한 사이즈를 너비와 높이로 지정하고 싶다면 border-box 
+      아니면 padding과 border를 제외한 컨텐츠의 실제 사이즈를 지정하고 싶다면 content-box
+      현업에서 대부분 border-box를 사용한다.
+      */
+      box-sizing: border-box;
+    }
+
+    .box3 {
+      box-sizing: content-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+</body>
+
+</html>

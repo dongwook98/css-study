@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Position: Absolute</title>
+  <style>
+    .outer {
+      width: 400px;
+      height: 400px;
+      margin: 50px;
+      background-color: darkslategray;
+    }
+
+    .box {
+      position: relative;
+      width: 80%;
+      height: 80%;
+      padding: 20px;
+      background-color: royalblue;
+    }
+
+    .inner {
+      width: 100%;
+      height: 30%;
+    }
+
+    .inner1 {
+      background-color: palevioletred;
+    }
+
+    .inner2 {
+      background-color: palegoldenrod;
+      /* 1. position: absolute;는 기존 문서 flow에서 빠져나와서 그 아래에 있는 요소들의 재배치가 일어난다.
+        2. absolute의 위치를 결정하는 기준은 부모에 맞춰지는데 그 부모는 absolute가 들어있는 요소중에 
+        position이 static이 아닌 가장 근접한 부모를 기준으로 위치가 결정된다.
+        3. absoluteㅇ 요소 너비도 position이 static이 아닌 가장 근접한 부모의 요소의 너비를 따라간다.
+      */
+      position: absolute;
+      top: 80px;
+      left: 80px;
+    }
+
+    .inner3 {
+      background-color: darkseagreen;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+    <div class="outer">
+      <div class="box">
+        <div class="inner inner1">inner1</div>
+        <div class="inner inner2">inner2</div>
+        <div class="inner inner3">inner3</div>
+      </div>
+    </div>
+  </body>
+</body>
+
+</html>
